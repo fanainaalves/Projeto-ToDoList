@@ -3,6 +3,7 @@ package controller;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -25,9 +26,10 @@ public class Tarefas extends JPanel{
             e.printStackTrace();
         }
 
-		this.setPreferredSize(new Dimension(40,20));
-		this.setBackground(Color.red);
+		this.setPreferredSize(new Dimension(40,10));
+		this.setBackground(Color.WHITE);
 		this.setLayout(new BorderLayout());
+		
 
 		marcado = false;
 
@@ -38,8 +40,9 @@ public class Tarefas extends JPanel{
 		this.add(indice, BorderLayout.WEST);
 
 		nomeDaTarefa = new JTextField("Digite suas tarefas aqui..");
+		nomeDaTarefa.setFont(new Font("serif", Font.ITALIC,15));
 		nomeDaTarefa.setBorder(BorderFactory.createEmptyBorder());
-		nomeDaTarefa.setBackground(Color.red);
+		nomeDaTarefa.setBackground(Color.WHITE);
 
 		this.add(nomeDaTarefa, BorderLayout.CENTER);
 

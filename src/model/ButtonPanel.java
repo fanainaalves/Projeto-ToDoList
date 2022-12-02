@@ -1,5 +1,6 @@
 package model;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
@@ -19,12 +20,12 @@ public class ButtonPanel extends JPanel{
 	}
 
 	public ButtonPanel() {
-		setPreferredSize(new Dimension(500,60));
-		//setBackground(Color.red);
+		setPreferredSize(new Dimension(500,43));
+		setBackground(Color.GRAY);
 
 		addTarefas = new JButton("Adicionar Tarefas");
 		addTarefas.setFont(new Font("Sans-serif", Font.PLAIN, 15));
-
+		
 		add(addTarefas);
 
 		add(Box.createHorizontalStrut(10));

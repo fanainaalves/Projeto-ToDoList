@@ -1,4 +1,4 @@
-package app;
+package controller;
 
 import java.awt.BorderLayout;
 import java.awt.event.MouseAdapter;
@@ -7,26 +7,24 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import controller.BarraDeTitulo;
-import controller.Lista;
-import controller.Tarefas;
 import model.ButtonPanel;
 
-public class App extends JFrame{
+public class Controlador extends JFrame{
 
-	
 	private BarraDeTitulo barraDeTitulo;
 	private Lista lista;
 	private ButtonPanel buttonPanel;
 	private JButton adicionarTarefas, limparTarefas;
+	private final JFrame janela;
 
-	public App(){
+	public Controlador(){
+		setTitle("TO DO - List");
+		setSize(500,600);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setVisible(true);
 		
-		this.setSize(500,600);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setLocationRelativeTo(null);
-		this.setVisible(true);
-
+		janela = new JFrame();
 		barraDeTitulo = new BarraDeTitulo();
 		lista = new Lista();
 		buttonPanel = new ButtonPanel();
@@ -68,5 +66,9 @@ public class App extends JFrame{
 				repaint();
 			}
 		});
+	}
+
+	public JFrame getJanela() {
+		return janela;
 	}
 }

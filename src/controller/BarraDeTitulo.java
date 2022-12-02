@@ -10,14 +10,14 @@ import javax.swing.JPanel;
 public class BarraDeTitulo extends JPanel {
 
 	public BarraDeTitulo() {
-		setPreferredSize(new Dimension(15,70));
-		setBackground(Color.LIGHT_GRAY);
+		setPreferredSize(new Dimension(13,70));
+		setBackground(Color.lightGray);
 
-		JLabel tituloText = new JLabel("To Do - List");
-		setPreferredSize(new Dimension(200,35));
-		tituloText.setFont(new Font("Sans-serif", Font.BOLD, 20));
+		JLabel tituloText = new JLabel("Meu TO DO List");
+		this.setPreferredSize(new Dimension(200,40));
+		tituloText.setFont(new Font("serif", Font.BOLD + Font.ITALIC , 20));
 		tituloText.setHorizontalAlignment(JLabel.CENTER);
 		setVisible(true);
-		add(tituloText);
+		this.add(tituloText);
 	}
 }

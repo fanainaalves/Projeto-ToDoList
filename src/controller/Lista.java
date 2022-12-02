@@ -20,7 +20,7 @@ public class Lista extends JPanel{
 
 		layout.setVgap(5);
 		this.setLayout(layout);
-		//setBackground(Color.BLUE);
+		//setBackground(Color.yellow);
 	}
 
 	public void enumerarTarefas() {

@@ -1,9 +1,7 @@
 package view;
 
-import javax.swing.JFrame;
 import javax.swing.UIManager;
-
-import app.App;
+import controller.Controlador;
 
 public class ToDoList {
 	public static void main(String[] args) {
@@ -14,6 +12,6 @@ public class ToDoList {
             e.printStackTrace();
         }
 		
-		new App();
+		new Controlador();
 	}
 }
