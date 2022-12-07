@@ -1,4 +1,4 @@
-package controller;
+package view;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -7,9 +7,9 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class BarraDeTitulo extends JPanel {
+public class BarraDeTituloPanel extends JPanel {
 
-	public BarraDeTitulo() {
+	public BarraDeTituloPanel() {
 		setPreferredSize(new Dimension(13,70));
 		setBackground(Color.lightGray);
 

@@ -1,4 +1,4 @@
-package controller;
+package view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -12,13 +12,13 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
-public class Tarefas extends JPanel{
+public class TarefasPanel extends JPanel{
 	private JLabel indice;
 	private JTextField nomeDaTarefa;
 	private JButton concluido;
 	private boolean marcado;
 
-	public Tarefas() {
+	public TarefasPanel() {
 		
 		try {
             UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");

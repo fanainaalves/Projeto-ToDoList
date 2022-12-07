@@ -1,4 +1,4 @@
-package view;
+package model;
 
 import javax.swing.UIManager;
 import controller.Controlador;

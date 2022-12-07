@@ -7,12 +7,15 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import model.ButtonPanel;
+import view.BarraDeTituloPanel;
+import view.ButtonPanel;
+import view.ListaPanel;
+import view.TarefasPanel;
 
 public class Controlador extends JFrame{
 
-	private BarraDeTitulo barraDeTitulo;
-	private Lista lista;
+	private BarraDeTituloPanel barraDeTitulo;
+	private ListaPanel lista;
 	private ButtonPanel buttonPanel;
 	private JButton adicionarTarefas, limparTarefas;
 	private final JFrame janela;
@@ -25,8 +28,8 @@ public class Controlador extends JFrame{
 		setVisible(true);
 		
 		janela = new JFrame();
-		barraDeTitulo = new BarraDeTitulo();
-		lista = new Lista();
+		barraDeTitulo = new BarraDeTituloPanel();
+		lista = new ListaPanel();
 		buttonPanel = new ButtonPanel();
 
 		this.add(barraDeTitulo, BorderLayout.NORTH);
@@ -43,7 +46,7 @@ public class Controlador extends JFrame{
 		adicionarTarefas.addMouseListener(new MouseAdapter(){
 			@Override
 			public void mousePressed(MouseEvent e) {
-				Tarefas tarefas = new Tarefas();
+				TarefasPanel tarefas = new TarefasPanel();
 				lista.add(tarefas);
 				lista.enumerarTarefas();
 				revalidate();

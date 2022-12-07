@@ -1,4 +1,4 @@
-package controller;
+package view;
 
 import java.awt.Component;
 import java.awt.GridLayout;
@@ -6,9 +6,9 @@ import java.awt.GridLayout;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
-public class Lista extends JPanel{
+public class ListaPanel extends JPanel{
 	
-	public Lista() {
+	public ListaPanel() {
 		
 		try {
 	        UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
@@ -26,16 +26,16 @@ public class Lista extends JPanel{
 	public void enumerarTarefas() {
 		Component[] listarItens = this.getComponents();
 		for(int i = 0; i < listarItens.length; i++) {
-			if(listarItens[i] instanceof Tarefas) {
-				((Tarefas) listarItens[i]).changeIndex(i+1);
+			if(listarItens[i] instanceof TarefasPanel) {
+				((TarefasPanel) listarItens[i]).changeIndex(i+1);
 			}
 		}
 	}
 	
 	public void removerTarefasCompletadas() {
 		for(Component c : getComponents()) {
-			if(c instanceof Tarefas) {
-				if(((Tarefas)c).isMarcado()) {
+			if(c instanceof TarefasPanel) {
+				if(((TarefasPanel)c).isMarcado()) {
 					remove(c);
 					enumerarTarefas();
 				}
